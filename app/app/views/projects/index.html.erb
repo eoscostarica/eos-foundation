@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Search Projects</h1>
+
+<%= render 'search' %>
+<p><br>
+  Cant find your project?  
+  <%= link_to 'Register New Project', new_project_path %>
+<br>
+</p>
+
+<h1>Browse Projects</h1>
+<table>
+  <thead>
+    <tr>
+      <th><%= sort_link(@q, :name) %></th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>URL</th>
+      <th>EOS Accounts</th>
+      <th><%= sort_link(@q, :status) %></th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %> </td>
+        <td><%= project.description %> </td>
+        <td><%= project.category_id %> </td>
+        <td><%= project.url %> </td>
+        <td><%= project.eos_accounts %> </td>
+        <td><%= project.status %> </td>
+        <td><%#= link_to 'Show', project %> 
+
+          <% if project.status == 'Candidate'  %>
+            <%= link_to 'Edit', edit_project_path(project) %>
+          <% end %>
+
+           <%#= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @projects %>

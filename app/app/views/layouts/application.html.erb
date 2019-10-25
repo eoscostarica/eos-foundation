@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "EOS Foundation" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div style="padding: 20px;">
+      <%# Rails flash messages styled for Zurb Foundation %>
+      <% flash.each do |name, msg| %>
+        <% if msg.is_a?(String) %>
+          <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+            <%= content_tag :div, msg %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        <% end %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

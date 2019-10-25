@@ -1,0 +1,14 @@
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+  <%= f.label :category_id_eq %>
+  <%= f.select :category_id_eq, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: true %>
+  <%= f.label :status_eq %>
+  <%= f.select :status_eq, Project::STATUS, include_blank: true %>
+
+  <%= f.label :eos_accounts_cont %>
+  <%= f.search_field :eos_accounts_cont %>
+
+  <%= f.submit %>
+<% end %>
