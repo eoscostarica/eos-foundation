@@ -1,7 +1,7 @@
 # The Foundation Value Receipt Model & Distribution:
 ### Recognizing Those Who Got Us Here with the Foundation token
 
-The EOS Foundation will recognize the talented individuals that contributed in so many ways to making the EOS blockchain what it is today. Via a non-transferable governance token, the Foundation will empower members to source and distribute resources for the enhancement of the EOS blockchain and ecosystem. Below we discuss the intentions and proposed mechanics of EOS Foundation.
+The EOS Foundation will recognize the talented individuals that contributed in so many ways to making the EOS blockchain what it is today. Via a non-transferable governance token, the Foundation will empower members to source and distribute resources for the enhancement of the EOS blockchain and ecosystem. 
 
 ## Recognizing Those Who Got Us Here
 While EOSIO was built by Block.One, the EOS blockchain was launched by hundreds of distributed individuals and organizations around the world. With unique motivations, this group banded together in June of 2018 to launch what would become one of the most valuable blockchain platforms to date. Since then, countless contributions have been made in the name of making the EOS blockchain more valuable for all, and only a fraction of those have been rewarded or even recognized.
