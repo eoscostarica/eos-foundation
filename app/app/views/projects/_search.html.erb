@@ -1,14 +1,26 @@
 <%= search_form_for @q do |f| %>
-
-  <%= f.label :name_cont %>
-  <%= f.search_field :name_cont %>
-  <%= f.label :category_id_eq %>
-  <%= f.select :category_id_eq, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: true %>
-  <%= f.label :status_eq %>
-  <%= f.select :status_eq, Project::STATUS, include_blank: true %>
-
-  <%= f.label :eos_accounts_cont %>
-  <%= f.search_field :eos_accounts_cont %>
-
-  <%= f.submit %>
+<div class="grid-container">
+	<div class="grid-x grid-padding-x">
+		<div class="medium-2 cell">
+			<%= f.label :name_cont %>
+			<%= f.search_field :name_cont %>
+		</div>
+		<div class="medium-3 cell">
+			<%= f.label :category_id_eq %>
+			<%= f.select :category_id_eq, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: true %>
+		</div>
+		<div class="medium-3 cell">
+			<%= f.label :status_eq %>
+			<%= f.select :status_eq, Project::STATUS, include_blank: true %>
+		</div>
+		<div class="medium-2 cell">
+			<%= f.label :eos_accounts_cont %>
+			<%= f.search_field :eos_accounts_cont %>
+		</div>
+		<div class="medium-2 cell">
+			<br/>
+			<%= f.submit %>
+		</div>
+	</div>
+</div>
 <% end %>

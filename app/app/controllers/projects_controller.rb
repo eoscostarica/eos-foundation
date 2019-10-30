@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   def index
   	q_param = params[:q]
     page = params[:page]
-    per_page = params[:per_page]
+    per_page = params[:per_page] || 100
 
     @q = Project.ransack q_param
     @projects = @q.result.page(page).per(per_page)
@@ -33,6 +33,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.status = 'Under Review'
 
     respond_to do |format|
       if @project.save
@@ -77,6 +78,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :category_id, :url, :eos_accounts)
+      params.require(:project).permit(:name, :description, :category, :url, :eos_accounts, :status)
     end
 end
