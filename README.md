@@ -1,3 +1,4 @@
+<center>![](./visual-guide/eos-foundation-logo.png)</center>
 # The Foundation Value Receipt Model & Distribution:
 ### Recognizing Those Who Got Us Here with the Foundation token
 
