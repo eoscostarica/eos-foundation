@@ -1,4 +1,4 @@
-<center>![](visual-guide/eos-foundation-logo.png)</center>
+![](visual-guide/eos-foundation-logo.png)
 
 
 # The Foundation Value Receipt Model & Distribution:
