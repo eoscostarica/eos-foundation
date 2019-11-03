@@ -15,3 +15,5 @@ categories = Category.create([
 	{ name: 'Other' },
 	{ name: 'Social' }
 ])
+
+User.new({ :email => 'webmaster@eosio.cr', :password => 'reIgnite2019', :password_confirmation => 'reIgnite2019'}).save

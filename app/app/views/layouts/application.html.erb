@@ -22,7 +22,32 @@
           </div>
         <% end %>
       <% end %>
-      <%= yield %>
+
+      <div class="top-bar" style="background-color: white" >
+        <div class="top-bar-left" >
+          <ul class="dropdown menu" data-dropdown-menu style="background-color: white" >
+            <li></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "button") %> 
+              </li>
+            <% else %>
+              <li>
+                <%= link_to('Login', new_user_session_path) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <h1> EOS Community Projects</h1>
+
+      <div class="column row" id="content">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

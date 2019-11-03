@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
     per_page = params[:per_page] || 100
 
     @q = Project.ransack q_param
+    @q.sorts = 'id desc' if @q.sorts.empty?
     @projects = @q.result.page(page).per(per_page)
 
     @categories = Category.all
@@ -21,8 +22,6 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
-    @categories = Category.all
   end
 
   # GET /projects/1/edit
@@ -32,7 +31,6 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
     @project.status = 'Under Review'
 
     respond_to do |format|
@@ -74,10 +72,11 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+  
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :category, :url, :eos_accounts, :status)
+      params.require(:project).permit(:name, :description, :category_id, :url, :eos_accounts, :status)
     end
 end

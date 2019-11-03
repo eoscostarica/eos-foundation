@@ -1,15 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Search Projects</h1>
+<h4>Recognizing Those Who Got Us Here with the Foundation token</h4>
+<p>The EOS Foundation will recognize the talented individuals that contributed in so many ways to making the EOS blockchain what it is today. Via a non-transferable governance token, the Foundation will empower members to source and distribute resources for the enhancement of the EOS blockchain and ecosystem.</p>
 
-<%= render 'search' %>
-<p><br>
-  Cant find your project?  
-  <%= link_to 'Register New Project', new_project_path %>
-<br>
+<p>
+  The (interim) EOS Foundation Steering Committee has been compiling an extensive list of individuals and organizations to recognize, and is asking the community for further nominations. Be sure to submit your potential honorees, including yourself.
 </p>
+<%= render 'search' %>
 
-<h1>Browse Projects</h1>
+<h2>Browse Projects</h2>
+<%= paginate @projects %>
 <table>
   <thead>
     <tr>
