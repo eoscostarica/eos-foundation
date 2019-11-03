@@ -3,6 +3,10 @@
 @import 'settings';
 @import 'foundation';
 
+// Import google fonts for custom styles 
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap');
+
 // If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
 //
 // @import 'motion-ui/motion-ui';
