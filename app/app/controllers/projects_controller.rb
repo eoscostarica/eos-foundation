@@ -9,7 +9,6 @@ class ProjectsController < ApplicationController
     per_page = params[:per_page] || 100
 
     @q = Project.ransack q_param
-    @q.sorts = 'id desc' if @q.sorts.empty?
     @projects = @q.result.page(page).per(per_page)
 
     @categories = Category.all

@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "EOS Foundation" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "EOS Foundation" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <body>
-    <div style="padding: 20px;">
-      <%# Rails flash messages styled for Zurb Foundation %>
-      <% flash.each do |name, msg| %>
-        <% if msg.is_a?(String) %>
-          <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
-            <%= content_tag :div, msg %>
-            <a href="#" class="close">&times;</a>
-          </div>
-        <% end %>
-      <% end %>
+<body>
 
-      <div class="top-bar" style="background-color: white" >
-        <div class="top-bar-left" >
-          <ul class="dropdown menu" data-dropdown-menu style="background-color: white" >
-            <li></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <% if user_signed_in? %>
-              <li>
-                <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "button") %> 
-              </li>
-            <% else %>
-              <li>
-                <%= link_to('Login', new_user_session_path) %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-      <h1> EOS Community Projects</h1>
+  <%# Rails flash messages styled for Zurb Foundation %>
+  <% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+  <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+    <%= content_tag :div, msg %>
+    <a href="#" class="close">&times;</a>
+  </div>
+  <% end %>
+  <% end %>
 
-      <div class="column row" id="content">
-        <%= yield %>
-      </div>
+  <div class="top-bar" style="background-color: white" >
+    <div class="top-bar-left" >
+      <ul class="dropdown menu" data-dropdown-menu style="background-color: white" >
+        <li></li>
+      </ul>
     </div>
-  </body>
+    <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "button") %> 
+        </li>
+        <% else %>
+        <li>
+          <%= link_to('Login', new_user_session_path) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div style="padding: 20px;">
+    <h1> EOS Community Projects</h1>
+    <div class="column row" id="content">
+      <%= yield %>
+    </div>
+  </div>
+  <footer class="social-footer">
+    <div class="social-footer-left">
+      <a href="#"><img class="logo" src=""></a>
+    </div>
+    <div class="social-footer-icons">
+      <ul class="menu simple">
+        <li><a href="https://github.com/eoscostarica/eos-foundation" target="_blank" style="color: white">Contribute to this project on GitHub. <i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+</body>
 </html>
