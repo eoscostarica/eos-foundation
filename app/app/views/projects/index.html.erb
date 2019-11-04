@@ -3,7 +3,7 @@
 <p>The EOS Foundation will recognize the talented individuals that contributed in so many ways to making the EOS blockchain what it is today. Via a non-transferable governance token, the Foundation will empower members to source and distribute resources for the enhancement of the EOS blockchain and ecosystem.</p>
 
 <p>
-  The (interim) EOS Foundation Steering Committee has been compiling an extensive list of individuals and organizations to recognize, and is asking the community for further nominations. Be sure to submit your potential honorees, including yourself.
+  The (interim) EOS Foundation Steering Committee has been compiling an extensive list of individuals and organizations to recognize, and is asking the community for further nominations. Be sure to <%= link_to 'submit your potential honorees, including yourself', new_project_path %>.
 </p>
 <%= render 'search' %>
 
@@ -28,7 +28,7 @@
         <td><%= project.name %> </td>
         <td><%= project.description %> </td>
         <td><%= project.category_id %> </td>
-        <td><%= project.url %> </td>
+        <td><%= link_to project.url, project.url, target: :_blank %></td>
         <td><%= project.eos_accounts %> </td>
         <td><%= project.status %> </td>
         <td><%#= link_to 'Show', project %> 

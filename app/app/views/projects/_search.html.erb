@@ -8,12 +8,12 @@
 				<%= f.search_field :name_cont %>
 			</div>
 			<div class="medium-3 cell">
-				<%= f.label "Find by Category" %>
-				<%= f.select :category_id_eq, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: true %>
+				<%= f.label "Filter by Category" %>
+				<%= f.select :category_id_eq, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), include_blank: "All" %>
 			</div>
 			<div class="medium-3 cell">
-				<%= f.label "Find by Status" %>
-				<%= f.select :status_eq, Project::STATUS, include_blank: true %>
+				<%= f.label "Filter by Status" %>
+				<%= f.select :status_eq, Project::STATUS, include_blank: "All" %>
 			</div>
 			<div class="medium-2 cell">
 				<%= f.label "Find by Account" %>
