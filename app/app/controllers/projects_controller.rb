@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  #before_action :set_project, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /projects
   # GET /projects.json
@@ -32,8 +33,6 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project.status = 'Under Review'
-
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
