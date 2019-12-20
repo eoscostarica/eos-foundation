@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
 
-	STATUS = ['Candidate','Under Review', 'Registered']
+	STATUS = ['Candidate', 'Under Review', 'Registered', 'Inactive']
 
 	has_and_belongs_to_many :categories
 
