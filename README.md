@@ -6,7 +6,7 @@
 
 # Value Receipt Model & Distribution Web Application
 
-Our objective as a community is to produce the initial value receipt distribution list for members of the EOS foundation.
+**Our objective as a community is to produce the initial value receipt distribution list for founding members of the EOS foundation.**
 
 
 Two types of accounts qualify as candidates
