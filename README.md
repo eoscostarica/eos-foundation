@@ -3,12 +3,9 @@
   ![](visual-guide/eos-foundation-logo.png)
   
 </center>
+# Value Receipt Model & Distribution Web Application
 
-# EOS Foundation Web App
-### Value Receipt Model & Distribution:
-
-
-Our objective is to produce the initial value receipt Distribution List for members of the EOS foundation.
+Our objective as a community is to produce the initial value receipt distribution list for members of the EOS foundation.
 
 
 Two types of accounts qualify as candidates
