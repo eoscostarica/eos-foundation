@@ -3,6 +3,7 @@
   ![](visual-guide/eos-foundation-logo.png)
   
 </center>
+
 # Value Receipt Model & Distribution Web Application
 
 Our objective as a community is to produce the initial value receipt distribution list for members of the EOS foundation.
