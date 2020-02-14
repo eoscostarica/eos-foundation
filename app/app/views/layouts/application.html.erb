@@ -29,6 +29,16 @@
         <li></li>
       </ul>
     </div>
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <%= link_to('Projects', projects_path, class: "button") %> 
+        </li>
+        <li>
+          <%= link_to('Accounts', accounts_path, class: "button") %> 
+        </li>
+      </ul>
+    </div>
     <div class="top-bar-right">
       <ul class="dropdown menu" data-dropdown-menu>
         <% if user_signed_in? %>
@@ -44,7 +54,8 @@
     </div>
   </div>
   <div style="padding: 20px;">
-    <h1> EOS Community Projects</h1>
+    <h1>EOS Foundation</h1>
+    <h2>Value Receipt Model & Distribution</h2>
     <div class="column row" id="content">
       <%= yield %>
     </div>
