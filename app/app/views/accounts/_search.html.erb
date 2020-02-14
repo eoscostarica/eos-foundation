@@ -1,0 +1,16 @@
+<%= search_form_for @q do |f| %>
+
+	<div class="callout secondary">
+		<h2>Search Accounts</h2>
+		<div class="grid-x grid-padding-x">
+			<div class="medium-2 cell">
+				<%= f.label "Account Name" %>
+				<%= f.search_field :account_cont %>
+			</div>
+			<div class="medium-2 cell">
+				<br/>
+				<%= f.submit class: 'button' %>
+			</div>
+		</div>
+	</div>
+<% end %>

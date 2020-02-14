@@ -1,5 +1,4 @@
-<%#= render 'search' %>
-
+<%= render 'search' %>
 <h2>Browse Accounts</h2>
 <%= paginate @accounts %>
 <table>
@@ -9,6 +8,7 @@
       <th><%= sort_link(@q, :balance) %></th>
       <th><%= sort_link(@q, :is_eligable) %></th>
       <th><%= sort_link(@q, :is_registered) %></th>
+      <th></th>
     </tr>
   </thead>
 

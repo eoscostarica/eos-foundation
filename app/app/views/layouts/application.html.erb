@@ -30,14 +30,6 @@
       </ul>
     </div>
     <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li>
-          <%= link_to('Projects', projects_path, class: "button") %> 
-        </li>
-        <li>
-          <%= link_to('Accounts', accounts_path, class: "button") %> 
-        </li>
-      </ul>
     </div>
     <div class="top-bar-right">
       <ul class="dropdown menu" data-dropdown-menu>
@@ -54,8 +46,24 @@
     </div>
   </div>
   <div style="padding: 20px;">
-    <h1>EOS Foundation</h1>
-    <h2>Value Receipt Model & Distribution</h2>
+      <h1>EOS Foundation</h1>
+      <h2>Value Receipt Model & Distribution</h2>
+
+    <h4>Recognizing those who got us here with the foundation token.</h4>
+    <p>The EOS Foundation will recognize the talented individuals that contributed in so many ways to making the EOS blockchain what it is today. Via a non-transferable governance token, the Foundation will empower members to source and distribute resources for the enhancement of the EOS blockchain and ecosystem.</p>
+
+    <p>
+      The (interim) EOS Foundation Steering Committee has been compiling an extensive list of individuals and organizations to recognize, and is asking the community for further nominations. Be sure to <%= link_to 'submit your potential honorees, including yourself', new_project_path %>.
+    </p>
+    <div class="grid-x" style="padding: 20px;">
+
+        <div class="cell large-6">
+          <%= link_to('Projects', projects_path, class: "large expanded button") %> 
+        </div>
+        <div class="cell large-6">
+          <%= link_to('Accounts', accounts_path, class: "large expanded button") %> 
+        </div>
+    </div>
     <div class="column row" id="content">
       <%= yield %>
     </div>
