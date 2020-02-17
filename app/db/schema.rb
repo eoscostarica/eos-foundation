@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_28_234706) do
+ActiveRecord::Schema.define(version: 2020_02_17_004322) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "account"
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(version: 2019_12_28_234706) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "Candidate"
+    t.string "telegram"
+    t.text "wechat"
+    t.text "email"
+    t.string "public_telegram"
+    t.boolean "wallet_login", default: false
     t.index ["category_id"], name: "index_projects_on_category_id"
   end
 
