@@ -8,7 +8,14 @@
 	  <%= f.input :description %>
 	  <%= f.input :category_id, collection: @categories , prompt: "Choose a category"  %>
 	  <%= f.input :url %>
-	  <%= f.input :eos_accounts %>
+    <%= f.input :public_telegram %>
+
+	  <h3>Admin Only contact info</h3>
+    <h4>This information will only be visible for admins to help verify your account.</h4>
+    <%= f.input :telegram %>
+    <%= f.input :wechat %>
+    <%= f.input :email %>
+
   </div>
 
   <div class="form-actions">
