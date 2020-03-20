@@ -8,6 +8,9 @@
 
 **Our objective as a community is to produce the initial value receipt distribution list for founding members of the EOS foundation.**
 
+- [Find out more on the project landing page](https://eos-foundation.eosio.cr)
+- [See web app prototype](https://foundation.eosio.cr)
+
 
 Two types of accounts qualify as candidates
 
