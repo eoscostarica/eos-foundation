@@ -1,0 +1,63 @@
+body {
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+
+.headerBox {
+    padding: 20px;
+}
+.lightGray {
+    background-color: #fafafa;
+}
+.headerBox, section, footer, hr {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+footer { 
+    text-align: center;
+}
+header {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+.flex-item2 {
+    flex: 50%;
+}
+.flex-item3 {
+    flex: 33.33%;
+}
+.phSmall { 
+    background-color: #d8d8d8;
+    width: 30px;
+    height: 30px;
+}
+.phMed {
+    background-color: #d8d8d8;
+    width: 70%;
+    height: 30px;
+}
+.phLarge {
+    background-color: #d8d8d8;
+    width: 70%;
+    height: 150px;
+}
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    #logo { width: 80%; }
+    .flex-container {flex-direction: column;}
+    .flex-item2, .flex-item3 {flex: 100%;}
+  }
