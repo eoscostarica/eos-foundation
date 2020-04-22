@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+input, button {
+    font-family: 'Oswald', sans-serif;
+    font-size: medium;
+}
 input { 
     padding: 10px;
     border: 0;
@@ -16,14 +20,13 @@ button {
 .headerBox {
     padding: 20px;
 }
-.lightGray {
-    background-color: #fafafa;
-}
+
 .headerBox, section, footer, hr {
     max-width: 1024px;
     margin: 0 auto;
 }
 footer { 
+    padding-top: 30px;
     text-align: center;
 }
 header {
@@ -44,6 +47,10 @@ header {
 .flex-item3 {
     flex: 33.33%;
     padding: 5px 2%;
+}
+.lightGray {
+    background-color: #fafafa;
+    padding: 50px;
 }
 .phSmall { 
     background-color: #d8d8d8;
@@ -66,6 +73,10 @@ header {
     width: 50%;
     margin: 20px auto 30px;
 }
+.tele {
+    width: 30px;
+    margin: 10px;
+}
 .videoSection { 
     padding: 50px 25%; 
 }
@@ -84,8 +95,24 @@ header {
         height:100%;
         }
 #subscribe { margin: 30px; }
+.buttonLink {
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    width: 50%;
+    border: 2px solid #3d3d3d;
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.margin { margin: 0 2%; }
+#recMemb { margin-bottom: 30px; }
 @media screen and (max-width: 600px) {
+    .buttonLink { width: 70%; }
+    input {width:80%; display: block; margin: 5px auto;}
     #logo { width: 80%; }
     .flex-container {flex-direction: column;}
     .flex-item2, .flex-item3 {flex: 100%;}
+    .videoSection { padding: 50px 2%; }
   }
