@@ -22,7 +22,7 @@
         <td><%#= link_to 'Show', project %> 
 
           <% if account.is_registered == false  %>
-            <%= link_to 'Register Account', accounts_path %>
+            <%= link_to 'Register Account', accounts_path,  id: "btn-transfer" %>
           <% end %>
 
            <%#= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

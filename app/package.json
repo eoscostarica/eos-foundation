@@ -1,5 +1,29 @@
 {
-  "name": "app",
+  "name": "eos-foundation",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "5.0.1",
+    "ual-anchor": "^0.3.1",
+    "ual-ledger": "^0.2.0",
+    "ual-lynx": "^0.3.0",
+    "ual-meetone": "^0.1.1",
+    "ual-plainjs-renderer": "^0.2.0",
+    "ual-scatter": "^0.2.0",
+    "ual-token-pocket": "^0.2.0"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
