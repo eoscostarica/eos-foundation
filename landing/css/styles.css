@@ -16,6 +16,7 @@ button {
     height: 10px;
     padding: 10px;
 }
+#subs { cursor: pointer; }
 .big { font-size: large; }
 .headerBox {
     padding: 20px;
