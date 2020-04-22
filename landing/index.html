@@ -25,11 +25,12 @@
             <div class="headerBox">
                 <img id="logo" src="img/eosfoundation-logo.svg" alt="EOS Foundation">
                 <h1>Created By and For the Community</h1>
-                <p>Hello, and welcome to the beginning of something important. We view EOS Foundation as a container for facilitating code, capital, and connections in ways which haven’t been available so far for EOS Mainnet community.</p>
-                <form action="suscribeForm">
+                <p class="big">Hello, and welcome to the beginning of something important. We view EOS Foundation as a container for facilitating code, capital, and connections in ways which haven’t been available so far for EOS Mainnet community.</p>
+                <form id="subscribe" action="subscribeForm">
+                    <h3>Recieve Updates and News</h3>
                     <input type="text" name="name" id="nameInput" placeholder="Your name" required>
                     <input type="email" name="email" id="emailInput" placeholder="Your Email" required>
-                    <input type="submit" value="suscribe">
+                    <input type="submit" value="Subscribe">
                 </form>
             </div>
         </header>
@@ -45,32 +46,34 @@
                 <img src="" alt="" class="phMed">
             </div>
         </section> -->
+        <section ><h2>Recognizing those in the community who got us here</h2></section>
         <section class="flex-container">
             <div class="flex-item2">
-                <h2>Recognizing those in the community who got us here</h2>
                 <h3>Value Reciepts</h3>
                 <p>A non fungible token that enable recognition of good actors in the development of not only software but also the community as a whole. A badge of honor for your effort and work.</p>
+                
+            </div>
+            <div class="flex-item2">
                 <h3>Membership</h3>
                 <p>As a member you will be part, either by vote or acting as a custodian, of the decisions of the EOS Foundation. Feel free to reach out and be part of this new step for the EOS community.</p>
             </div>
-            <div class="flex-item2">
-                <iframe src="https://www.youtube.com/embed/ghBsn7DA9bg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="videoSection">
+            <div class="youtube-responsive-container">
+                <iframe src="https://www.youtube.com/embed/ghBsn7DA9bg?rel=0&modestbranding=1&showinfo=0&controls=0&theme=light" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
         <hr>
         <section class="flex-container">
             <div class="flex-item3">
-                <img src="" alt="" class="phSmall">
                 <h2>What?</h2>
                 <p>An autonomous, descentralized, non-profit organization that will enable the EOS community represent and promote itself for the good of many.</p>
             </div>
             <div class="flex-item3">
-                <img src="" alt="" class="phSmall">
                 <h2>Why?</h2>
                 <p>As seen on many other blockchains, a foundation is a vital part of the descentralized nature of this technology. We cannot leave many oportunities arise, move based on sheer luck and end up being wasted on opportunistic endevours. The community must act.</p>
             </div>
             <div class="flex-item3">
-                <img src="" alt="" class="phSmall">
                 <h2>How?</h2>
                 <p>The first step is to raise you hand and be proud of your work. Join the list of contributors to the EOS ecosystem or validate your known project. Be part of the initial group of Advisor and Genesis Steward Candidates who can help steer this project forward to a fully-launched DAO.</p>
             </div>
@@ -90,8 +93,8 @@
         </section>
         <section></section>
         <footer>
-            <span>EOSFoundation 2020</span>
+            <span>EOSFoundation <span id="year"></span></span>
         </footer>
-        <script src="js/main.js" async defer></script>
     </body>
+    <script src="js/main.js" async defer></script>
 </html>
